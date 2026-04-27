@@ -27,12 +27,12 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: Build with Maven
-      run: mvn -B package --file pom.xml
     - name: Installer Maven 3.9.6
       run: |
         curl -sL https://archive.apache.org/dist/maven/maven-3/3.9.6/binaries/apache-maven-3.9.6-bin.tar.gz | tar xz
         echo "$PWD/apache-maven-3.9.6/bin" >> $GITHUB_PATH
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml
 
     - name: Compiler le projet
       run: mvn -B compile --file pom.xml
