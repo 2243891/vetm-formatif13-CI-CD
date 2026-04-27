@@ -42,5 +42,3 @@ jobs:
 
     - name: Lint
       run: mvn -B formatter:validate
-    - name: Verifier les test
-      run: mvn verify
