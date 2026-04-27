@@ -41,4 +41,4 @@ jobs:
       run: mvn -B test --file pom.xml
 
     - name: Lint
-      run: -mvn -B formatter:validate
+      run: mvn -B formatter:validate
